@@ -12,22 +12,22 @@ class Kusk < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/kubeshop/kusk/releases/download/0.1.0/kusk_0.1.0_macOS_x86_64.tar.gz"
-      sha256 "c6b4367e37056d1b410ababc8f2e87aff22a7a68b1a52ee7c53d13e319806f47"
+      sha256 "ecd8d2f54a544edd42c0010ca34fdde00ddffb3f83c4b49f3a7ec5d45266ddc8"
     end
     if Hardware::CPU.arm?
       url "https://github.com/kubeshop/kusk/releases/download/0.1.0/kusk_0.1.0_macOS_arm64.tar.gz"
-      sha256 "d8790cf047232cac36cec400da9d9628d36f00b87c97cd1afbe401e06ecdcc4d"
+      sha256 "b311e4342b3d1bfaec56b240a85195a6dbdef136ab491d4be432bc23a74546b8"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/kubeshop/kusk/releases/download/0.1.0/kusk_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "3c5319e085e5d09da97ce83ba7ec29de06cb1e3a6c5d35763962ab223fe6fb46"
+      sha256 "cb2e0c941a7df0d5ecb0f9fb0cdc13d90c29228a87ab96ed450fb87a2dec5bb9"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/kubeshop/kusk/releases/download/0.1.0/kusk_0.1.0_Linux_arm64.tar.gz"
-      sha256 "69391acd64ea2dc2a0541b9523f4d9778a343982ae00d517bc7e198a3f445840"
+      sha256 "a4f2c1424417822bb0ba43fec82593d4b72d6bf1f00e39dccfd43b533a94f85a"
     end
   end
 
