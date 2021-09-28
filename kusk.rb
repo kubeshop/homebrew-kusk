@@ -5,29 +5,29 @@
 class Kusk < Formula
   desc "Make your OpenAPI definition the source of truth for API resources in cluster"
   homepage "https://kusk.io"
-  version "0.2.1"
+  version "0.3.0"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/kusk/releases/download/0.2.1/kusk_0.2.1_macOS_x86_64.tar.gz"
-      sha256 "d84960e106c008214ef029b45477037b9df544ea2fc1aafa2d97aea020d870bd"
+      url "https://github.com/kubeshop/kusk/releases/download/0.3.0/kusk_0.3.0_macOS_x86_64.tar.gz"
+      sha256 "29295f7833e9dc140894494a1a3f5625fdc7c169203d269a83fcf44cee7beefc"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kubeshop/kusk/releases/download/0.2.1/kusk_0.2.1_macOS_arm64.tar.gz"
-      sha256 "4a9e2203376dd5d94b4d828c647d70135b4d5d1423400603d2769302c9f5bb4e"
+      url "https://github.com/kubeshop/kusk/releases/download/0.3.0/kusk_0.3.0_macOS_arm64.tar.gz"
+      sha256 "a4a9f865c3a6f830775b1b232a7bbbb209a79b9edd9c55230b976e0c6462da58"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/kusk/releases/download/0.2.1/kusk_0.2.1_Linux_x86_64.tar.gz"
-      sha256 "9b9c80379c99c8d31210a701f30ba69fd92e5c1a7549ca81214509c51dbdcb3f"
+      url "https://github.com/kubeshop/kusk/releases/download/0.3.0/kusk_0.3.0_Linux_x86_64.tar.gz"
+      sha256 "db9d59ba89e4bad61e2fa9ec2c2665f9b80c83194af89337d6bc6d8717fdea77"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubeshop/kusk/releases/download/0.2.1/kusk_0.2.1_Linux_arm64.tar.gz"
-      sha256 "daf0b810dfec5efd452fd15fe6cb0a60a2151388893548020f0da2bb67139038"
+      url "https://github.com/kubeshop/kusk/releases/download/0.3.0/kusk_0.3.0_Linux_arm64.tar.gz"
+      sha256 "8295742f0aa81e8e38bf229e22e7fc83f936706a24ee2cacc988f9f07f85d3c4"
     end
   end
 
