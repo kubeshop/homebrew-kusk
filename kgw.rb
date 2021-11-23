@@ -9,17 +9,17 @@ class Kgw < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/kgw/releases/download/0.1.0/kgw_0.1.0_macOS_x86_64.tar.gz"
-      sha256 "94de337d819cf2afc02ed25d6915053cafedadca3abb933fffdc0406fc6c51e5"
+    if Hardware::CPU.arm?
+      url "https://github.com/kubeshop/kgw/releases/download/0.1.0/kgw_0.1.0_macOS_arm64.tar.gz"
+      sha256 "8b0b9cfe5412d2b004bcd611982275b19ce3f70a5d2d8e582889d4ef3511c879"
 
       def install
         bin.install "kgw"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/kubeshop/kgw/releases/download/0.1.0/kgw_0.1.0_macOS_arm64.tar.gz"
-      sha256 "f1b2cb494beca84af946d3a785b67fa84a150be133f0239645bd7c430075dfe6"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubeshop/kgw/releases/download/0.1.0/kgw_0.1.0_macOS_x86_64.tar.gz"
+      sha256 "6f7987830e6551bf7311c4f2f3d5962b4c5360adcb5c66757806ee55b117ed24"
 
       def install
         bin.install "kgw"
@@ -30,7 +30,7 @@ class Kgw < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/kubeshop/kgw/releases/download/0.1.0/kgw_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "cd1a9e1ad8776b1f6641d3aaef2729350ea32331f5e30a080313781985598ed9"
+      sha256 "0d6932e006ca5f4a37754e150a365bc4a693d10499c1953fbc1cc081bd6b73f9"
 
       def install
         bin.install "kgw"
@@ -38,7 +38,7 @@ class Kgw < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/kubeshop/kgw/releases/download/0.1.0/kgw_0.1.0_Linux_arm64.tar.gz"
-      sha256 "7685ee06b263322fda038663f9aa13e8718449b699622de6077c3725f0ab4dc0"
+      sha256 "31f09d40b9ce5a3fe63594a27d14544a49088b05012af32ec77340007d2b8186"
 
       def install
         bin.install "kgw"
