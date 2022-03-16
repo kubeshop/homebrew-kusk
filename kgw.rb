@@ -5,21 +5,21 @@
 class Kgw < Formula
   desc "Make your OpenAPI definition the source of truth for API resources in cluster"
   homepage "https://kusk.io"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kubeshop/kgw/releases/download/0.1.0/kgw_0.1.0_macOS_arm64.tar.gz"
-      sha256 "8b0b9cfe5412d2b004bcd611982275b19ce3f70a5d2d8e582889d4ef3511c879"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubeshop/kgw/releases/download/v0.1.1/kgw_0.1.1_macOS_x86_64.tar.gz"
+      sha256 "e06a0a1f872708b9bf7b255dfe85e4306eceef85ca19e579b9f40080d358f01d"
 
       def install
         bin.install "kgw"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/kgw/releases/download/0.1.0/kgw_0.1.0_macOS_x86_64.tar.gz"
-      sha256 "6f7987830e6551bf7311c4f2f3d5962b4c5360adcb5c66757806ee55b117ed24"
+    if Hardware::CPU.arm?
+      url "https://github.com/kubeshop/kgw/releases/download/v0.1.1/kgw_0.1.1_macOS_arm64.tar.gz"
+      sha256 "aee12362e22fab7777dd4f5d874dfd634b7a37ae1814bf922d36023581fa04c0"
 
       def install
         bin.install "kgw"
@@ -28,17 +28,17 @@ class Kgw < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/kgw/releases/download/0.1.0/kgw_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "0d6932e006ca5f4a37754e150a365bc4a693d10499c1953fbc1cc081bd6b73f9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kubeshop/kgw/releases/download/v0.1.1/kgw_0.1.1_Linux_arm64.tar.gz"
+      sha256 "0b0c73c957a6362145df1d6f6e164e3e297ca777dbbdc9f057dae6bada38efd7"
 
       def install
         bin.install "kgw"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubeshop/kgw/releases/download/0.1.0/kgw_0.1.0_Linux_arm64.tar.gz"
-      sha256 "31f09d40b9ce5a3fe63594a27d14544a49088b05012af32ec77340007d2b8186"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubeshop/kgw/releases/download/v0.1.1/kgw_0.1.1_Linux_x86_64.tar.gz"
+      sha256 "3fe8399c07b3b3a509e8f19e72cf222cbd4554dffc0eea645f82fea78f2e5487"
 
       def install
         bin.install "kgw"
