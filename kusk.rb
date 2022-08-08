@@ -5,21 +5,21 @@
 class Kusk < Formula
   desc "Make your OpenAPI definition the source of truth for API resources in cluster"
   homepage "https://kusk.io"
-  version "1.1.5-rc3"
+  version "1.1.5"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.1.5-rc3/kusk_1.1.5-rc3_macOS_arm64.tar.gz"
-      sha256 "eda0db8e7a8c35001872a584c2478b21fdaa44652706a9a38f6071295a5b2739"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.1.5/kusk_1.1.5_macOS_x86_64.tar.gz"
+      sha256 "6c0cf2a76597d596bf7a517465f620e559fde2e0aa3875db52b28bf29e04773e"
 
       def install
         bin.install "kusk"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.1.5-rc3/kusk_1.1.5-rc3_macOS_x86_64.tar.gz"
-      sha256 "552a98f385cf1d46c186193296be5a1489c5eb3ab0a1cb0621058a1474eab9c0"
+    if Hardware::CPU.arm?
+      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.1.5/kusk_1.1.5_macOS_arm64.tar.gz"
+      sha256 "65357811e75cc5d03acaf9d6a7b1d817b52a556384c5ba2fe09fa886a567a1de"
 
       def install
         bin.install "kusk"
@@ -28,17 +28,17 @@ class Kusk < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.1.5-rc3/kusk_1.1.5-rc3_Linux_arm64.tar.gz"
-      sha256 "81a3129042fe4944817e05dbd9afd8e1a0d1f447ffa538087acde0e6b7deef4b"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.1.5/kusk_1.1.5_Linux_x86_64.tar.gz"
+      sha256 "635f5a7318ecddb082edf8e9d1b6bba2ba8914487e92caf6eb418ea8c9c42311"
 
       def install
         bin.install "kusk"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.1.5-rc3/kusk_1.1.5-rc3_Linux_x86_64.tar.gz"
-      sha256 "c742c79e46225935518ae91247d13e19d65322bf648617ebc652e729f06f5b8a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.1.5/kusk_1.1.5_Linux_arm64.tar.gz"
+      sha256 "ef1a036251a9e4d39822a47dcf3300a096d6b54d38f51c2f280f74299ebed2f3"
 
       def install
         bin.install "kusk"
