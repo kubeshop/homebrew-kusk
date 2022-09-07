@@ -5,21 +5,21 @@
 class Kusk < Formula
   desc "Make your OpenAPI definition the source of truth for API resources in cluster"
   homepage "https://kusk.io"
-  version "1.2.0"
+  version "1.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.2.0/kusk_1.2.0_macOS_x86_64.tar.gz"
-      sha256 "c134f9d5e04615b25f97eefa9518225b309d4b7207a8721ef20ec4e8653fecba"
+      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.2.1/kusk_1.2.1_macOS_x86_64.tar.gz"
+      sha256 "b03bcbf76fd5f7e4bdf80f736d60b99b224ff113308a9024d83ac491da343cf0"
 
       def install
         bin.install "kusk"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.2.0/kusk_1.2.0_macOS_arm64.tar.gz"
-      sha256 "2e6af02eff0304497da1bd952b81cb375fe0880f5a4f1da36190f7484505a7cf"
+      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.2.1/kusk_1.2.1_macOS_arm64.tar.gz"
+      sha256 "33368186e6546a02b83489c438317ad5af9e4ba65b5943d509d9ed232f7bd564"
 
       def install
         bin.install "kusk"
@@ -29,16 +29,16 @@ class Kusk < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.2.0/kusk_1.2.0_Linux_x86_64.tar.gz"
-      sha256 "3d6c6a0a164f2a4918a209f082f63070d4c5d49ecff36c2b61df6ea445bc8195"
+      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.2.1/kusk_1.2.1_Linux_x86_64.tar.gz"
+      sha256 "c7647496e314f6eb54b4c190b5f48913d963f07bcb8103ac7fa160f28920d651"
 
       def install
         bin.install "kusk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.2.0/kusk_1.2.0_Linux_arm64.tar.gz"
-      sha256 "fadfea668a1060e471fab01d9085b52a9b3d82290b8c800a9bab06c2fbdefeaf"
+      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.2.1/kusk_1.2.1_Linux_arm64.tar.gz"
+      sha256 "e8ad9b1006c4e29dd1454e952b59d2e5145774e1729bc15c3953b9bdd405ec30"
 
       def install
         bin.install "kusk"
