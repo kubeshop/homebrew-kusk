@@ -5,21 +5,21 @@
 class Kusk < Formula
   desc "Make your OpenAPI definition the source of truth for API resources in cluster"
   homepage "https://kusk.io"
-  version "1.3.16"
+  version "1.3.17"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.3.16/kusk_1.3.16_macOS_arm64.tar.gz"
-      sha256 "4ef8b793669749f703d09049cad1cbe38d78a8e0798521d512a372a68732a8c5"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.3.17/kusk_1.3.17_macOS_x86_64.tar.gz"
+      sha256 "a151d4379fe2885c604392af42fb54c754563877a5abc6fd4fc739fb9f935c5c"
 
       def install
         bin.install "kusk"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.3.16/kusk_1.3.16_macOS_x86_64.tar.gz"
-      sha256 "613b2f057cd0f0a41717ecfb4cf9dd95b019b399b0e41f1e0e75cf10be214671"
+    if Hardware::CPU.arm?
+      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.3.17/kusk_1.3.17_macOS_arm64.tar.gz"
+      sha256 "d9b288535d99331c1d83164102124808ad8a8418ce53f9a3a21a09cc111207fe"
 
       def install
         bin.install "kusk"
@@ -29,16 +29,16 @@ class Kusk < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.3.16/kusk_1.3.16_Linux_arm64.tar.gz"
-      sha256 "fb045b68ac0c9bc92e58d467f3342f3aaa24122389a0ec5480648849c2f94570"
+      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.3.17/kusk_1.3.17_Linux_arm64.tar.gz"
+      sha256 "f5b0efb57fa58c69ca1e9c93b997e92cc8a5c2fcc51ca68545ab83a8dc7f67f8"
 
       def install
         bin.install "kusk"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.3.16/kusk_1.3.16_Linux_x86_64.tar.gz"
-      sha256 "c4695ac3c721663ff80da33008cafda74abd233b0314af30fe67ed647e674b46"
+      url "https://github.com/kubeshop/kusk-gateway/releases/download/v1.3.17/kusk_1.3.17_Linux_x86_64.tar.gz"
+      sha256 "a14f8b02a77d6efc616c5e411a3cd04d86cc44f2d7b31281d0e0c4e6e9fb36bb"
 
       def install
         bin.install "kusk"
